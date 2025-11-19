@@ -1,0 +1,51 @@
+POST http://localhost:3001/register/
+content-type: application/json
+
+{
+    "login": "test",
+    "password": "test123"
+}
+
+###
+
+POST http://localhost:3001/login/
+content-type: application/json
+
+{
+  "login": "antons",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3001/logout/
+content-type: application/json
+
+{
+    "login": "test",
+    "password": "test123"
+}
+
+###
+
+GET http://localhost:3001/users/
+content-type: application/json
+
+{
+    "id": "69158b2d027fec5730a0c87d",
+    "login": "test",
+    "roleId": 2,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTU4YjJkMDI3ZmVjNTczMGEwYzg3ZCIsImlhdCI6MTc2MzEwNjM2NiwiZXhwIjoxNzY1Njk4MzY2fQ.qdo093pcKpzWyk4Q-Z1lgGGuXGLSRYfvr483P7cEm7k"
+}
+
+###
+
+POST http://localhost:3001/posts/
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWNiZDhhNDk3OWI0NjYyY2I0YWYxMiIsImlhdCI6MTc2MzQ5MzczMywiZXhwIjoxNzY2MDg1NzMzfQ.S1Tp89p4Tx9jBR4_Dsh-BaMLHF4eOA32Xf0yVPKatUk"
+
+{
+  "title": "My Title",
+  "imageUrl": "https://cdn.britannica.com/76/240976-050-F176FC86/European-hornet-Vespa-crabro-wasp-insect.jpg",
+  "content": "My content"
+}
